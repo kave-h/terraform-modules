@@ -20,6 +20,37 @@ module "ec2_instance" {
   }
 }
 ```
+## 🧪 Running Tests
+
+This module includes [Terratest](https://github.com/gruntwork-io/terratest) integration tests written in Go.
+
+### Requirements
+
+- [Go](https://golang.org/dl/) 1.20 or later
+- Terraform CLI
+- AWS credentials with permissions to create EC2, VPC, and related resources
+
+### Setup
+
+Install the Go dependencies:
+
+```bash
+cd test/ec2_instance
+go mod tidy
+```
+
+### How to Run
+
+```bash
+go test -v
+```
+
+This command will:
+* Deploy the example configuration in `examples/ec2_instance`
+* Validate outputs like `public_ip` and `ssh_command`
+* Automatically destroy all resources after the test completes
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Modules
 

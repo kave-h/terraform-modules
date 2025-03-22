@@ -1,0 +1,49 @@
+# Local .terraform working directory
+.terraform/
+.terraform.lock.hcl
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files
+terraform.tfvars
+*.auto.tfvars
+
+# Sensitive files
+*.pem
+*.key
+*.crt
+*.zip
+
+# Pre-commit hook output
+*.md.swp
+terraform-docs-cache/
+
+# Ignore plan files
+*.tfplan
+
+# Go build and module files
+*.test
+*.out
+*.exe
+*.mod
+*.sum
+*.a
+bin/
+vendor/
+
+# Go coverage and logs
+*.log
+*.coverprofile
+
+# macOS system files
+.DS_Store
+
+# IDE configs
+.idea/
+.vscode/

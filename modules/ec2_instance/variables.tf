@@ -25,6 +25,12 @@ variable "tags" {
   default     = {}
 }
 
+variable "eip_tags" {
+  description = "A map of tags to assign to the Elastic IP."
+  type        = map(string)
+  default     = {}
+}
+
 # ----------------------------------------
 # SECURITY GROUP CONFIGURATION
 # ----------------------------------------

@@ -60,6 +60,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_eip.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
 | [aws_instance.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
 | [aws_key_pair.generated](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair) | resource |
 | [aws_security_group.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
@@ -75,6 +76,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_ami_id"></a> [ami\_id](#input\_ami\_id) | The AMI ID to use for the instance. If empty, you must pass it explicitly from the root module. | `string` | `null` | no |
+| <a name="input_eip_tags"></a> [eip\_tags](#input\_eip\_tags) | A map of tags to assign to the Elastic IP. | `map(string)` | `{}` | no |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | The EC2 instance type to launch. Defaults to t2.micro (Free Tier eligible). | `string` | `"t2.micro"` | no |
 | <a name="input_key_pair_name"></a> [key\_pair\_name](#input\_key\_pair\_name) | The name of an existing EC2 key pair to use for SSH access. | `string` | `null` | no |
 | <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | The ID of the subnet where the instance will be launched. | `string` | n/a | yes |
@@ -87,6 +89,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_ami_id"></a> [ami\_id](#output\_ami\_id) | AMI ID used to launch the EC2 instance |
+| <a name="output_elastic_ip"></a> [elastic\_ip](#output\_elastic\_ip) | Elastic IP address of the EC2 instance |
 | <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | ID of the EC2 instance |
 | <a name="output_key_name"></a> [key\_name](#output\_key\_name) | Name of the key pair associated with the EC2 instance |
 | <a name="output_private_ip"></a> [private\_ip](#output\_private\_ip) | Private IP address assigned to the EC2 instance |

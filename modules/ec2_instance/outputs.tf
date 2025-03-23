@@ -36,6 +36,11 @@ output "public_dns" {
   value       = aws_instance.this.public_dns
 }
 
+output "elastic_ip" {
+  description = "Elastic IP address of the EC2 instance"
+  value       = aws_eip.this.public_ip
+}
+
 output "security_group_ids" {
   description = "List of security group IDs attached to the instance"
   value       = aws_instance.this.vpc_security_group_ids

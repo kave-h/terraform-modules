@@ -12,8 +12,13 @@ output "ssh_command" {
   value       = "ssh -i ~/.ssh/new-key.pem ubuntu@${module.ec2_instance.public_dns}"
 }
 
+output "elastic_ip" {
+  description = "Elastic IP address of the EC2 instance"
+  value       = module.ec2_instance.elastic_ip
+}
+
 # ----------------------------------------
-# SSH KEY OUTPUT (IF GENERATED)
+# SSH KEY OUTPUT
 # ----------------------------------------
 
 output "private_key_pem" {

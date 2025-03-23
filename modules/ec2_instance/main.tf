@@ -68,3 +68,9 @@ resource "aws_instance" "this" {
   key_name               = aws_key_pair.generated.key_name
   tags                   = var.tags
 }
+
+resource "aws_eip" "this" {
+  instance = aws_instance.this.id
+  domain   = "vpc"
+  tags     = var.eip_tags
+}

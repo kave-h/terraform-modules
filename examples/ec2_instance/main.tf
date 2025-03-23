@@ -35,4 +35,5 @@ module "ec2_instance" {
   subnet_id     = var.subnet_id          # Subnet ID to launch the instance in
   key_pair_name = var.key_pair_name      # Optional name to assign to the created key pair (a new key is always created)
   tags          = var.tags
+  eip_tags      = var.eip_tags
 }

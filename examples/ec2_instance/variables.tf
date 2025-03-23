@@ -26,6 +26,12 @@ variable "tags" {
   default     = {}
 }
 
+variable "eip_tags" {
+  description = "A map of tags to assign to the Elastic IP"
+  type        = map(string)
+  default     = {}
+}
+
 variable "subnet_id" {
   description = "ID of an existing subnet in your VPC"
   type        = string
